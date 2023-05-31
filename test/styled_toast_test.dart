@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-import 'package:flutter_styled_toast/src/styled_toast_theme.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -229,12 +227,12 @@ class TestAppWidgetState extends State<TestAppWidget> {
 
   void insertEntry() {
     if (widget.overlayEntry != null) {
-      Overlay.of(_context)?.insert(widget.overlayEntry!);
+      Overlay.of(_context).insert(widget.overlayEntry!);
     }
   }
 
   StyledToastTheme? getStyleToastTheme() {
-    StyledToastTheme.of(_context);
+    return StyledToastTheme.of(_context);
   }
 
   @override
